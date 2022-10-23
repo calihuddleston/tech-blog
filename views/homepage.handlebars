@@ -1,0 +1,27 @@
+{{!-- {{log 'testing' posts}} --}}
+{{#each users as |user| }}
+<div class="column align-center mb-5">
+  <div class="col-md-6">
+    <h2>{{user.username}}, what would you like to share?</h2>
+  </div>
+  <div class="col-md-6">
+    <input type="text" id="post-title">
+    <input type="text" id="post-text">
+     <button class="btn" id="postBtn">Post</button>
+  </div>
+</div>
+{{else}}
+<p>nothing to render</p>
+{{/each}}
+
+{{!-- {{#each posts as |post|}}
+    <div id="post-section">
+        <div id="title-section">
+        <h3 id="title">{{post.title}}</h3>
+        </div>
+        <p id="text">{{post.text}}</p>
+    </div>
+     {{/each}}  --}}
+
+<script src="/js/post.js"></script>
+    
